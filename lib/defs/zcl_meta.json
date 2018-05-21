@@ -137,7 +137,7 @@
                 "params":[{"id": "uint16"},{"position": "uint16"},{"message":"dynUint8"}],
                 "dir":0},
             "speakId":{
-                "params":[{"id":"uint16"},{"length":"uint16"}],
+                "params":[{"voice":"uint16"},{"id":"uint16"},{"length":"uint16"}],
                 "dir":0}
         },
         "genBasic": {
