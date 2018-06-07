@@ -140,6 +140,55 @@
                 "params":[{"voice":"uint16"},{"id":"uint16"},{"length":"uint16"}],
                 "dir":0}
         },
+        "genOta": {
+            "queryNextImageReq":{
+                "params": [
+                    {"fieldControl":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"currentFileVersion":"uint32"},
+                    {"hardwareVersion":"uint16"}
+                ]
+            },
+            "imageBlockReq":{
+                "params": [
+                    {"fieldControl":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"fileVersion":"uint32"},
+                    {"fileOffset":"uint32"},
+                    {"maximumDataSize":"uint8"}
+                ]
+            },
+            "upgradeEndReq":{
+                "params": [
+                    {"fieldControl":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"fileVersion":"uint32"}
+                ]
+            },
+            "queryNextImageRsp":{
+                "params": [
+                    {"status":"uint8"}
+                ]
+            },
+            "imageBlockRsp":{
+                "params": [
+                    {"data":"dynUint8"}
+                ]
+            },
+            "upgradeEndRsp":{
+                "params": [
+                    {"fieldControl":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"fileVersion":"uint32"},
+                    {"currentTime":"uint32"},
+                    {"upgradeTime":"uint32"}
+                ]
+            }
+        },
         "genBasic": {
             "resetFactDefault":{
                 "params":[],
