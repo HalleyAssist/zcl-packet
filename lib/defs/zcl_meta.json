@@ -137,7 +137,7 @@
                 "params":[{"id": "uint16"},{"position": "uint16"},{"message":"dynUint8"}],
                 "dir":0},
             "speakId":{
-                "params":[{"voice":"uint16"},{"id":"uint16"},{"length":"uint16"}],
+                "params":[{"id":"uint16"},{"length":"uint16"}],
                 "dir":0}
         },
         "genOta": {
@@ -148,7 +148,7 @@
                     {"imageType":"uint16"},
                     {"currentFileVersion":"uint32"},
                     {"hardwareVersion":"uint16"}
-                ]
+                ],"dir":0
             },
             "imageBlockReq":{
                 "params": [
@@ -158,7 +158,7 @@
                     {"fileVersion":"uint32"},
                     {"fileOffset":"uint32"},
                     {"maximumDataSize":"uint8"}
-                ]
+                ],"dir":0
             },
             "upgradeEndReq":{
                 "params": [
@@ -166,7 +166,7 @@
                     {"manufacturerCode":"uint16"},
                     {"imageType":"uint16"},
                     {"fileVersion":"uint32"}
-                ]
+                ],"dir":0
             },
             "queryNextImageRsp":{
                 "params": [
