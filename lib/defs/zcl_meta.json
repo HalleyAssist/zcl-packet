@@ -141,13 +141,18 @@
                 "dir":0}
         },
         "genOta": {
+            "imageNotify":{
+                "params": [
+                    {"payloadType":"uint8"},
+                    {"queryJitter":"uint8"}
+                ],"dir":1
+            },
             "queryNextImageReq":{
                 "params": [
                     {"fieldControl":"uint8"},
                     {"manufacturerCode":"uint16"},
                     {"imageType":"uint16"},
-                    {"currentFileVersion":"uint32"},
-                    {"hardwareVersion":"uint16"}
+                    {"currentFileVersion":"uint32"}
                 ],"dir":0
             },
             "imageBlockReq":{
@@ -170,13 +175,28 @@
             },
             "queryNextImageRsp":{
                 "params": [
-                    {"status":"uint8"}
-                ]
+                    {"status":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"fileVersion":"uint32"},
+                    {"imageSize":"uint32"}
+                ],"dir":1
             },
-            "imageBlockRsp":{
+            "imageBlockRspSuccess":{
                 "params": [
+                    {"status":"uint8"},
+                    {"manufacturerCode":"uint16"},
+                    {"imageType":"uint16"},
+                    {"fileVersion":"uint32"},
+                    {"fileOffset":"uint32"},
+                    {"dataLen":"preLenUint8"},
                     {"data":"dynUint8"}
-                ]
+                ],"dir":1
+            },
+            "imageBlockRspAbort":{
+                "params": [
+                    {"status":"uint8"}
+                ],"dir":1
             },
             "upgradeEndRsp":{
                 "params": [
@@ -186,7 +206,7 @@
                     {"fileVersion":"uint32"},
                     {"currentTime":"uint32"},
                     {"upgradeTime":"uint32"}
-                ]
+                ],"dir":1
             }
         },
         "genBasic": {
