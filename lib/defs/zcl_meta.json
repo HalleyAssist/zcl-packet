@@ -167,7 +167,7 @@
             },
             "upgradeEndReq":{
                 "params": [
-                    {"fieldControl":"uint8"},
+                    {"status":"uint8"},
                     {"manufacturerCode":"uint16"},
                     {"imageType":"uint16"},
                     {"fileVersion":"uint32"}
