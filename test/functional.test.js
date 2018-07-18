@@ -42,9 +42,13 @@ describe('Functional Cmd framer and parser Check', function() {
             payload = funcObj.frame(args);
 
             funcObj.parse(payload, function (err, result) {
-                it(funcObj.cmd + ' frame() and parse() check', function () {
-                        expect(result).to.eql(args);
-                });
+                if(err){
+                    expect(err).to.equal(undefined, funcObj.cmd + ' frame() and parse() check')
+                }else{
+                    it(funcObj.cmd + ' frame() and parse() check', function () {
+                            expect(result).to.eql(args);
+                    });
+                }
             });
         });
     });
