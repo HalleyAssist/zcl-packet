@@ -131,10 +131,10 @@
     "functional": {
 	    "zeaker": {
             "speak":{
-                "params":[{"delay":"uint32"},{"messageLen":"preLenUint8"},{"message":"dynUint8"}],
+                "params":[{"delay":"uint32"},{"message":"dynUint8"}],
                 "dir":0},
             "addSpeakPart":{
-                "params":[{"id": "uint16"},{"position": "uint16"},{"messageLen":"preLenUint8"},{"message":"dynUint8"}],
+                "params":[{"id": "uint16"},{"position": "uint16"},{"message":"dynUint8"}],
                 "dir":0},
             "speakId":{
                 "params":[{"id":"uint16"},{"length":"uint16"}],
