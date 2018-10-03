@@ -33,8 +33,8 @@
   "dependencies": {
     "concentrate": "^0.2.3",
     "dissolve-chunks": "^1.3.0",
-    "enum": "^2.3.0",
-    "zcl-id": "https://github.com/HollyAssistTeam/zcl-id.git"
+    "light-enum": "git+https://github.com/splitice/light-enum.git",
+    "zcl-id": "git+https://github.com/HollyAssistTeam/zcl-id.git"
   },
   "devDependencies": {
     "busyman": "^0.3.0",
