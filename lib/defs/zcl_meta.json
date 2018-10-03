@@ -2,128 +2,128 @@
 	"foundation": {
 		"read": {
 			"params": [
-				["attrId", "uint16"]
+				["attrId", 1]
 			],
 			"knownBufLen": 2
 		},
 		"readRsp": {
 			"params": [
-				["attrId", "uint16"],
-				["status", "uint8"],
-				["extra", "readRsp"]
+				["attrId", 1],
+				["status", 0],
+				["extra", 32]
 			],
 			"knownBufLen": 3
 		},
 		"write": {
 			"params": [
-				["attrId", "uint16"],
-				["dataType", "uint8"],
-				["attrData", "variable"]
+				["attrId", 1],
+				["dataType", 0],
+				["attrData", 33]
 			],
 			"knownBufLen": 3
 		},
 		"writeUndiv": {
 			"params": [
-				["attrId", "uint16"],
-				["dataType", "uint8"],
-				["attrData", "variable"]
+				["attrId", 1],
+				["dataType", 0],
+				["attrData", 33]
 			],
 			"knownBufLen": 3
 		},
 		"writeRsp": {
 			"params": [
-				["extra", "writeRsp"]
+				["extra", 41]
 			],
 			"knownBufLen": 0
 		},
 		"writeNoRsp": {
 			"params": [
-				["attrId", "uint16"],
-				["dataType", "uint8"],
-				["attrData", "variable"]
+				["attrId", 1],
+				["dataType", 0],
+				["attrData", 33]
 			],
 			"knownBufLen": 3
 		},
 		"configReport": {
 			"params": [
-				["direction", "uint8"],
-				["attrId", "uint16"],
-				["extra", "configReport"]
+				["direction", 0],
+				["attrId", 1],
+				["extra", 34]
 			],
 			"knownBufLen": 3
 		},
 		"configReportRsp": {
 			"params": [
-				["extra", "configReportRsp"]
+				["extra", 35]
 			],
 			"knownBufLen": 0
 		},
 		"readReportConfig": {
 			"params": [
-				["direction", "uint8"],
-				["attrId", "uint16"]
+				["direction", 0],
+				["attrId", 1]
 			],
 			"knownBufLen": 3
 		},
 		"readReportConfigRsp": {
 			"params": [
-				["status", "uint8"],
-				["direction", "uint8"],
-				["attrId", "uint16"],
-				["extra", "readReportConfigRsp"]
+				["status", 0],
+				["direction", 0],
+				["attrId", 1],
+				["extra", 42]
 			],
 			"knownBufLen": 4
 		},
 		"report": {
 			"params": [
-				["attrId", "uint16"],
-				["dataType", "uint8"],
-				["attrData", "variable"]
+				["attrId", 1],
+				["dataType", 0],
+				["attrData", 33]
 			],
 			"knownBufLen": 3
 		},
 		"defaultRsp": {
 			"params": [
-				["cmdId", "uint8"],
-				["statusCode", "uint8"]
+				["cmdId", 0],
+				["statusCode", 0]
 			],
 			"knownBufLen": 2
 		},
 		"discover": {
 			"params": [
-				["startAttrId", "uint16"],
-				["maxAttrIds", "uint8"]
+				["startAttrId", 1],
+				["maxAttrIds", 0]
 			],
 			"knownBufLen": 3
 		},
 		"discoverRsp": {
 			"params": [
-				["attrId", "uint16"],
-				["dataType", "uint8"]
+				["attrId", 1],
+				["dataType", 0]
 			],
 			"knownBufLen": 3
 		},
 		"readStruct": {
 			"params": [
-				["attrId", "uint16"],
-				["selector", "selector"]
+				["attrId", 1],
+				["selector", 36]
 			],
 			"knownBufLen": 2
 		},
 		"writeStrcut": {
 			"params": [
-				["attrId", "uint16"],
-				["selector", "selector"],
-				["dataType", "uint8"],
-				["attrData", "multi"]
+				["attrId", 1],
+				["selector", 36],
+				["dataType", 0],
+				["attrData", 37]
 			],
 			"knownBufLen": 3
 		},
 		"writeStrcutRsp": {
 			"params": [
-				["status", "uint8"],
-				["attrId", "uint16"],
-				["selector", "selector"]
+				["status", 0],
+				["attrId", 1],
+				["selector", 36]
 			],
 			"knownBufLen": 3
 		}
@@ -132,27 +132,27 @@
 		"zeaker": {
 			"speak": {
 				"params": [
-					["voice", "uint16"],
-					["delay", "uint32"],
-					["message", "dynUint8"]
+					["voice", 1],
+					["delay", 2],
+					["message", 28]
 				],
 				"dir": 0,
 				"knownBufLen": 4
 			},
 			"addSpeakPart": {
 				"params": [
-					["id", "uint16"],
-					["position", "uint16"],
-					["message", "dynUint8"]
+					["id", 1],
+					["position", 1],
+					["message", 28]
 				],
 				"dir": 0,
 				"knownBufLen": 4
 			},
 			"speakId": {
 				"params": [
-					["voice", "uint16"],
-					["id", "uint16"],
-					["length", "uint16"]
+					["voice", 1],
+					["id", 1],
+					["length", 1]
 				],
 				"dir": 0
 			}
@@ -160,76 +160,76 @@
 		"genOta": {
 			"imageNotify": {
 				"params": [
-					["payloadType", "uint8"],
-					["queryJitter", "uint8"]
+					["payloadType", 0],
+					["queryJitter", 0]
 				],
 				"dir": 1
 			},
 			"queryNextImageReq": {
 				"params": [
-					["fieldControl", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["currentFileVersion", "uint32"]
+					["fieldControl", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["currentFileVersion", 2]
 				],
 				"dir": 0
 			},
 			"imageBlockReq": {
 				"params": [
-					["fieldControl", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["fileVersion", "uint32"],
-					["fileOffset", "uint32"],
-					["maximumDataSize", "uint8"]
+					["fieldControl", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["fileVersion", 2],
+					["fileOffset", 2],
+					["maximumDataSize", 0]
 				],
 				"dir": 0
 			},
 			"upgradeEndReq": {
 				"params": [
-					["status", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["fileVersion", "uint32"]
+					["status", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["fileVersion", 2]
 				],
 				"dir": 0
 			},
 			"queryNextImageRsp": {
 				"params": [
-					["status", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["fileVersion", "uint32"],
-					["imageSize", "uint32"]
+					["status", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["fileVersion", 2],
+					["imageSize", 2]
 				],
 				"dir": 1
 			},
 			"imageBlockRspSuccess": {
 				"params": [
-					["status", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["fileVersion", "uint32"],
-					["fileOffset", "uint32"],
-					["dataLen", "preLenUint8"],
-					["data", "dynUint8"]
+					["status", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["fileVersion", 2],
+					["fileOffset", 2],
+					["dataLen", 25],
+					["data", 28]
 				],
 				"dir": 1
 			},
 			"imageBlockRspAbort": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"upgradeEndRsp": {
 				"params": [
-					["fieldControl", "uint8"],
-					["manufacturerCode", "uint16"],
-					["imageType", "uint16"],
-					["fileVersion", "uint32"],
-					["currentTime", "uint32"],
-					["upgradeTime", "uint32"]
+					["fieldControl", 0],
+					["manufacturerCode", 1],
+					["imageType", 1],
+					["fileVersion", 2],
+					["currentTime", 2],
+					["upgradeTime", 2]
 				],
 				"dir": 1
 			}
@@ -243,7 +243,7 @@
 		"genIdentify": {
 			"identify": {
 				"params": [
-					["identifytime", "uint16"]
+					["identifytime", 1]
 				],
 				"dir": 0
 			},
@@ -253,27 +253,27 @@
 			},
 			"ezmodeInvoke": {
 				"params": [
-					["action", "uint8"]
+					["action", 0]
 				],
 				"dir": 0
 			},
 			"updateCommissionState": {
 				"params": [
-					["action", "uint8"],
-					["commstatemask", "uint8"]
+					["action", 0],
+					["commstatemask", 0]
 				],
 				"dir": 0
 			},
 			"triggerEffect": {
 				"params": [
-					["effectid", "uint8"],
-					["effectvariant", "uint8"]
+					["effectid", 0],
+					["effectvariant", 0]
 				],
 				"dir": 0
 			},
 			"identifyQueryRsp": {
 				"params": [
-					["timeout", "uint16"]
+					["timeout", 1]
 				],
 				"dir": 1
 			}
@@ -281,27 +281,27 @@
 		"genGroups": {
 			"add": {
 				"params": [
-					["groupid", "uint16"],
-					["groupname", "stringPreLen"]
+					["groupid", 1],
+					["groupname", 26]
 				],
 				"dir": 0
 			},
 			"view": {
 				"params": [
-					["groupid", "uint16"]
+					["groupid", 1]
 				],
 				"dir": 0
 			},
 			"getMembership": {
 				"params": [
-					["groupcount", "preLenUint8"],
-					["grouplist", "dynUint16"]
+					["groupcount", 25],
+					["grouplist", 29]
 				],
 				"dir": 0
 			},
 			"remove": {
 				"params": [
-					["groupid", "uint16"]
+					["groupid", 1]
 				],
 				"dir": 0
 			},
@@ -311,38 +311,38 @@
 			},
 			"addIfIdentifying": {
 				"params": [
-					["groupid", "uint16"],
-					["groupname", "stringPreLen"]
+					["groupid", 1],
+					["groupname", 26]
 				],
 				"dir": 0
 			},
 			"addRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"]
+					["status", 0],
+					["groupid", 1]
 				],
 				"dir": 1
 			},
 			"viewRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"],
-					["groupname", "stringPreLen"]
+					["status", 0],
+					["groupid", 1],
+					["groupname", 26]
 				],
 				"dir": 1
 			},
 			"getMembershipRsp": {
 				"params": [
-					["capacity", "uint8"],
-					["groupcount", "preLenUint8"],
-					["grouplist", "dynUint16"]
+					["capacity", 0],
+					["groupcount", 25],
+					["grouplist", 29]
 				],
 				"dir": 1
 			},
 			"removeRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"]
+					["status", 0],
+					["groupid", 1]
 				],
 				"dir": 1
 			}
@@ -350,133 +350,133 @@
 		"genScenes": {
 			"add": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"],
-					["transtime", "uint16"],
-					["scenename", "stringPreLen"],
-					["extensionfieldsets", "extfieldsets"]
+					["groupid", 1],
+					["sceneid", 0],
+					["transtime", 1],
+					["scenename", 26],
+					["extensionfieldsets", 38]
 				],
 				"dir": 0,
 				"knownBufLen": 6
 			},
 			"view": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 0
 			},
 			"remove": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 0
 			},
 			"removeAll": {
 				"params": [
-					["groupid", "uint16"]
+					["groupid", 1]
 				],
 				"dir": 0
 			},
 			"store": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 0
 			},
 			"recall": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 0
 			},
 			"getSceneMembership": {
 				"params": [
-					["groupid", "uint16"]
+					["groupid", 1]
 				],
 				"dir": 0
 			},
 			"enhancedAdd": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"],
-					["transtime", "uint16"],
-					["scenename", "stringPreLen"],
-					["extensionfieldsets", "extfieldsets"]
+					["groupid", 1],
+					["sceneid", 0],
+					["transtime", 1],
+					["scenename", 26],
+					["extensionfieldsets", 38]
 				],
 				"dir": 0,
 				"knownBufLen": 6
 			},
 			"enhancedView": {
 				"params": [
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 0
 			},
 			"copy": {
 				"params": [
-					["mode", "uint8"],
-					["groupidfrom", "uint16"],
-					["sceneidfrom", "uint8"],
-					["groupidto", "uint16"],
-					["sceneidto", "uint8"]
+					["mode", 0],
+					["groupidfrom", 1],
+					["sceneidfrom", 0],
+					["groupidto", 1],
+					["sceneidto", 0]
 				],
 				"dir": 0
 			},
 			"addRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupId", "uint16"],
-					["sceneId", "uint8"]
+					["status", 0],
+					["groupId", 1],
+					["sceneId", 0]
 				],
 				"dir": 1
 			},
 			"viewRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"],
-					["sceneid", "uint8"],
-					["transtime", "uint16"],
-					["scenename", "stringPreLen"],
-					["extensionfieldsets", "extfieldsets"]
+					["status", 0],
+					["groupid", 1],
+					["sceneid", 0],
+					["transtime", 1],
+					["scenename", 26],
+					["extensionfieldsets", 38]
 				],
 				"dir": 1,
 				"knownBufLen": 7
 			},
 			"removeRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["status", 0],
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 1
 			},
 			"removeAllRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"]
+					["status", 0],
+					["groupid", 1]
 				],
 				"dir": 1
 			},
 			"storeRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"],
-					["sceneid", "uint8"]
+					["status", 0],
+					["groupid", 1],
+					["sceneid", 0]
 				],
 				"dir": 1
 			},
 			"getSceneMembershipRsp": {
 				"params": [
-					["status", "uint8"],
-					["capacity", "uint8"],
-					["groupid", "uint16"],
-					["scenecount", "preLenUint8"],
-					["scenelist", "dynUint8"]
+					["status", 0],
+					["capacity", 0],
+					["groupid", 1],
+					["scenecount", 25],
+					["scenelist", 28]
 				],
 				"dir": 1
 			},
@@ -486,21 +486,21 @@
 			},
 			"enhancedViewRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupid", "uint16"],
-					["sceneid", "uint8"],
-					["transtime", "uint16"],
-					["scenename", "stringPreLen"],
-					["extensionfieldsets", "extfieldsets"]
+					["status", 0],
+					["groupid", 1],
+					["sceneid", 0],
+					["transtime", 1],
+					["scenename", 26],
+					["extensionfieldsets", 38]
 				],
 				"dir": 1,
 				"knownBufLen": 7
 			},
 			"copyRsp": {
 				"params": [
-					["status", "uint8"],
-					["groupidfrom", "uint16"],
-					["sceneidfrom", "uint8"]
+					["status", 0],
+					["groupidfrom", 1],
+					["sceneidfrom", 0]
 				],
 				"dir": 1
 			}
@@ -520,8 +520,8 @@
 			},
 			"offWithEffect": {
 				"params": [
-					["effectid", "uint8"],
-					["effectvariant", "uint8"]
+					["effectid", 0],
+					["effectvariant", 0]
 				],
 				"dir": 0
 			},
@@ -531,10 +531,10 @@
 			},
 			"onWithTimedOff": {
 				"params": [
-					["ctrlbits", "uint8"],
-					["ctrlbyte", "uint8"],
-					["ontime", "uint16"],
-					["offwaittime", "uint16"]
+					["ctrlbits", 0],
+					["ctrlbyte", 0],
+					["ontime", 1],
+					["offwaittime", 1]
 				],
 				"dir": 0
 			}
@@ -542,23 +542,23 @@
 		"genLevelCtrl": {
 			"moveToLevel": {
 				"params": [
-					["level", "uint8"],
-					["transtime", "uint16"]
+					["level", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"move": {
 				"params": [
-					["movemode", "uint8"],
-					["rate", "uint8"]
+					["movemode", 0],
+					["rate", 0]
 				],
 				"dir": 0
 			},
 			"step": {
 				"params": [
-					["stepmode", "uint8"],
-					["stepsize", "uint8"],
-					["transtime", "uint16"]
+					["stepmode", 0],
+					["stepsize", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
@@ -568,23 +568,23 @@
 			},
 			"moveToLevelWithOnOff": {
 				"params": [
-					["level", "uint8"],
-					["transtime", "uint16"]
+					["level", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveWithOnOff": {
 				"params": [
-					["movemode", "uint8"],
-					["rate", "uint8"]
+					["movemode", 0],
+					["rate", 0]
 				],
 				"dir": 0
 			},
 			"stepWithOnOff": {
 				"params": [
-					["stepmode", "uint8"],
-					["stepsize", "uint8"],
-					["transtime", "uint16"]
+					["stepmode", 0],
+					["stepsize", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
@@ -596,8 +596,8 @@
 		"genAlarms": {
 			"reset": {
 				"params": [
-					["alarmcode", "uint8"],
-					["clusterid", "uint16"]
+					["alarmcode", 0],
+					["clusterid", 1]
 				],
 				"dir": 0
 			},
@@ -619,17 +619,17 @@
 			},
 			"alarm": {
 				"params": [
-					["alarmcode", "uint8"],
-					["clusterid", "uint16"]
+					["alarmcode", 0],
+					["clusterid", 1]
 				],
 				"dir": 1
 			},
 			"getRsp": {
 				"params": [
-					["status", "uint8"],
-					["alarmcode", "uint8"],
-					["clusterid", "uint16"],
-					["timestamp", "uint32"]
+					["status", 0],
+					["alarmcode", 0],
+					["clusterid", 1],
+					["timestamp", 2]
 				],
 				"dir": 1
 			},
@@ -641,120 +641,120 @@
 		"genRssiLocation": {
 			"setAbsolute": {
 				"params": [
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"],
-					["power", "int16"],
-					["pathlossexponent", "uint16"]
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23],
+					["power", 23],
+					["pathlossexponent", 1]
 				],
 				"dir": 0
 			},
 			"setDevCfg": {
 				"params": [
-					["power", "int16"],
-					["pathlossexponent", "uint16"],
-					["calperiod", "uint16"],
-					["numrssimeasurements", "uint8"],
-					["reportingperiod", "uint16"]
+					["power", 23],
+					["pathlossexponent", 1],
+					["calperiod", 1],
+					["numrssimeasurements", 0],
+					["reportingperiod", 1]
 				],
 				"dir": 0
 			},
 			"getDevCfg": {
 				"params": [
-					["targetaddr", "longaddr"]
+					["targetaddr", 3]
 				],
 				"dir": 0
 			},
 			"getData": {
 				"params": [
-					["getdatainfo", "uint8"],
-					["numrsp", "uint8"],
-					["targetaddr", "longaddr"]
+					["getdatainfo", 0],
+					["numrsp", 0],
+					["targetaddr", 3]
 				],
 				"dir": 0
 			},
 			"rssiRsp": {
 				"params": [
-					["replyingdev", "longaddr"],
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"],
-					["rssi", "int8"],
-					["numrssimeasurements", "uint8"]
+					["replyingdev", 3],
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23],
+					["rssi", 22],
+					["numrssimeasurements", 0]
 				],
 				"dir": 0
 			},
 			"sendPings": {
 				"params": [
-					["targetaddr", "longaddr"],
-					["numrssimeasurements", "uint8"],
-					["calperiod", "uint16"]
+					["targetaddr", 3],
+					["numrssimeasurements", 0],
+					["calperiod", 1]
 				],
 				"dir": 0
 			},
 			"anchorNodeAnnounce": {
 				"params": [
-					["anchornodeaddr", "longaddr"],
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"]
+					["anchornodeaddr", 3],
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23]
 				],
 				"dir": 0
 			},
 			"devCfgRsp": {
 				"params": [
-					["status", "uint8"],
-					["power", "int16"],
-					["pathlossexp", "uint16"],
-					["calperiod", "uint16"],
-					["numrssimeasurements", "uint8"],
-					["reportingperiod", "uint16"]
+					["status", 0],
+					["power", 23],
+					["pathlossexp", 1],
+					["calperiod", 1],
+					["numrssimeasurements", 0],
+					["reportingperiod", 1]
 				],
 				"dir": 1
 			},
 			"dataRsp": {
 				"params": [
-					["status", "uint8"],
-					["locationtype", "uint8"],
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"],
-					["power", "int16"],
-					["pathlossexp", "uint16"],
-					["locationmethod", "uint8"],
-					["qualitymeasure", "uint8"],
-					["locationage", "uint16"]
+					["status", 0],
+					["locationtype", 0],
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23],
+					["power", 23],
+					["pathlossexp", 1],
+					["locationmethod", 0],
+					["qualitymeasure", 0],
+					["locationage", 1]
 				],
 				"dir": 1
 			},
 			"dataNotif": {
 				"params": [
-					["locationtype", "uint8"],
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"],
-					["power", "int16"],
-					["pathlossexp", "uint16"],
-					["locationmethod", "uint8"],
-					["qualitymeasure", "uint8"],
-					["locationage", "uint16"]
+					["locationtype", 0],
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23],
+					["power", 23],
+					["pathlossexp", 1],
+					["locationmethod", 0],
+					["qualitymeasure", 0],
+					["locationage", 1]
 				],
 				"dir": 1
 			},
 			"compactDataNotif": {
 				"params": [
-					["locationtype", "uint8"],
-					["coord1", "int16"],
-					["coord2", "int16"],
-					["coord3", "int16"],
-					["qualitymeasure", "uint8"],
-					["locationage", "uint16"]
+					["locationtype", 0],
+					["coord1", 23],
+					["coord2", 23],
+					["coord3", 23],
+					["qualitymeasure", 0],
+					["locationage", 1]
 				],
 				"dir": 1
 			},
 			"rssiPing": {
 				"params": [
-					["locationtype", "uint8"]
+					["locationtype", 0]
 				],
 				"dir": 1
 			},
@@ -764,15 +764,15 @@
 			},
 			"reportRssiMeas": {
 				"params": [
-					["reportingaddr", "longaddr"],
-					["numofneighbors", "preLenUint8"],
-					["neighborsinfo", "locationbuffer"]
+					["reportingaddr", 3],
+					["numofneighbors", 25],
+					["neighborsinfo", 39]
 				],
 				"dir": 1
 			},
 			"reqOwnLocation": {
 				"params": [
-					["reqaddr", "longaddr"]
+					["reqaddr", 3]
 				],
 				"dir": 1
 			}
@@ -780,54 +780,54 @@
 		"genCommissioning": {
 			"restartDevice": {
 				"params": [
-					["options", "uint8"],
-					["delay", "uint8"],
-					["jitter", "uint8"]
+					["options", 0],
+					["delay", 0],
+					["jitter", 0]
 				],
 				"dir": 0
 			},
 			"saveStartupParams": {
 				"params": [
-					["options", "uint8"],
-					["index", "uint8"]
+					["options", 0],
+					["index", 0]
 				],
 				"dir": 0
 			},
 			"restoreStartupParams": {
 				"params": [
-					["options", "uint8"],
-					["index", "uint8"]
+					["options", 0],
+					["index", 0]
 				],
 				"dir": 0
 			},
 			"resetStartupParams": {
 				"params": [
-					["options", "uint8"],
-					["index", "uint8"]
+					["options", 0],
+					["index", 0]
 				],
 				"dir": 0
 			},
 			"restartDeviceRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"saveStartupParamsRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"restoreStartupParamsRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"resetStartupParamsRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			}
@@ -835,8 +835,8 @@
 		"genPollCtrl": {
 			"checkinRsp": {
 				"params": [
-					["startfastpolling", "uint8"],
-					["fastpolltimeout", "uint16"]
+					["startfastpolling", 0],
+					["fastpolltimeout", 1]
 				],
 				"dir": 0
 			},
@@ -846,13 +846,13 @@
 			},
 			"setLongPollInterval": {
 				"params": [
-					["newlongpollinterval", "uint32"]
+					["newlongpollinterval", 2]
 				],
 				"dir": 0
 			},
 			"setShortPollInterval": {
 				"params": [
-					["newshortpollinterval", "uint16"]
+					["newshortpollinterval", 1]
 				],
 				"dir": 0
 			},
@@ -864,53 +864,53 @@
 		"closuresDoorLock": {
 			"lockDoor": {
 				"params": [
-					["pincodevalue", "stringPreLen"]
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"unlockDoor": {
 				"params": [
-					["pincodevalue", "stringPreLen"]
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"toggleDoor": {
 				"params": [
-					["pincodevalue", "stringPreLen"]
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"unlockWithTimeout": {
 				"params": [
-					["timeout", "uint16"],
-					["pincodevalue", "stringPreLen"]
+					["timeout", 1],
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"getLogRecord": {
 				"params": [
-					["logindex", "uint16"]
+					["logindex", 1]
 				],
 				"dir": 0
 			},
 			"setPinCode": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"],
-					["usertype", "uint8"],
-					["pincodevalue", "stringPreLen"]
+					["userid", 1],
+					["userstatus", 0],
+					["usertype", 0],
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"getPinCode": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"clearPinCode": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
@@ -920,118 +920,118 @@
 			},
 			"setUserStatus": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"]
+					["userid", 1],
+					["userstatus", 0]
 				],
 				"dir": 0
 			},
 			"getUserStatus": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"setWeekDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"],
-					["daysmask", "uint8"],
-					["starthour", "uint8"],
-					["startminute", "uint8"],
-					["endhour", "uint8"],
-					["endminute", "uint8"]
+					["scheduleid", 0],
+					["userid", 1],
+					["daysmask", 0],
+					["starthour", 0],
+					["startminute", 0],
+					["endhour", 0],
+					["endminute", 0]
 				],
 				"dir": 0
 			},
 			"getWeekDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"]
+					["scheduleid", 0],
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"clearWeekDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"]
+					["scheduleid", 0],
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"setYearDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"],
-					["zigbeelocalstarttime", "uint32"],
-					["zigbeelocalendtime", "uint32"]
+					["scheduleid", 0],
+					["userid", 1],
+					["zigbeelocalstarttime", 2],
+					["zigbeelocalendtime", 2]
 				],
 				"dir": 0
 			},
 			"getYearDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"]
+					["scheduleid", 0],
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"clearYearDaySchedule": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"]
+					["scheduleid", 0],
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"setHolidaySchedule": {
 				"params": [
-					["holidayscheduleid", "uint8"],
-					["zigbeelocalstarttime", "uint32"],
-					["zigbeelocalendtime", "uint32"],
-					["opermodelduringholiday", "uint8"]
+					["holidayscheduleid", 0],
+					["zigbeelocalstarttime", 2],
+					["zigbeelocalendtime", 2],
+					["opermodelduringholiday", 0]
 				],
 				"dir": 0
 			},
 			"getHolidaySchedule": {
 				"params": [
-					["holidayscheduleid", "uint8"]
+					["holidayscheduleid", 0]
 				],
 				"dir": 0
 			},
 			"clearHolidaySchedule": {
 				"params": [
-					["holidayscheduleid", "uint8"]
+					["holidayscheduleid", 0]
 				],
 				"dir": 0
 			},
 			"setUserType": {
 				"params": [
-					["userid", "uint16"],
-					["usertype", "uint8"]
+					["userid", 1],
+					["usertype", 0]
 				],
 				"dir": 0
 			},
 			"getUserType": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"setRfidCode": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"],
-					["usertype", "uint8"],
-					["pincodevalue", "stringPreLen"]
+					["userid", 1],
+					["userstatus", 0],
+					["usertype", 0],
+					["pincodevalue", 26]
 				],
 				"dir": 0
 			},
 			"getRfidCode": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
 			"clearRfidCode": {
 				"params": [
-					["userid", "uint16"]
+					["userid", 1]
 				],
 				"dir": 0
 			},
@@ -1041,210 +1041,210 @@
 			},
 			"lockDoorRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"unlockDoorRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"toggleDoorRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"unlockWithTimeoutRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getLogRecordRsp": {
 				"params": [
-					["logentryid", "uint16"],
-					["timestamp", "uint32"],
-					["eventtype", "uint8"],
-					["source", "uint8"],
-					["eventidalarmcode", "uint8"],
-					["userid", "uint16"],
-					["pincodevalue", "stringPreLen"]
+					["logentryid", 1],
+					["timestamp", 2],
+					["eventtype", 0],
+					["source", 0],
+					["eventidalarmcode", 0],
+					["userid", 1],
+					["pincodevalue", 26]
 				],
 				"dir": 1
 			},
 			"setPinCodeRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getPinCodeRsp": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"],
-					["usertype", "uint8"],
-					["pincodevalue", "stringPreLen"]
+					["userid", 1],
+					["userstatus", 0],
+					["usertype", 0],
+					["pincodevalue", 26]
 				],
 				"dir": 1
 			},
 			"clearPinCodeRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"clearAllPinCodesRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"setUserStatusRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getUserStatusRsp": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"]
+					["userid", 1],
+					["userstatus", 0]
 				],
 				"dir": 1
 			},
 			"setWeekDayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getWeekDayScheduleRsp": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"],
-					["status", "uint8"],
-					["daysmask", "uint8"],
-					["starthour", "uint8"],
-					["startminute", "uint8"],
-					["endhour", "uint8"],
-					["endminute", "uint8"]
+					["scheduleid", 0],
+					["userid", 1],
+					["status", 0],
+					["daysmask", 0],
+					["starthour", 0],
+					["startminute", 0],
+					["endhour", 0],
+					["endminute", 0]
 				],
 				"dir": 1
 			},
 			"clearWeekDayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"setYearDayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getYearDayScheduleRsp": {
 				"params": [
-					["scheduleid", "uint8"],
-					["userid", "uint16"],
-					["status", "uint8"],
-					["zigbeelocalstarttime", "uint32"],
-					["zigbeelocalendtime", "uint32"]
+					["scheduleid", 0],
+					["userid", 1],
+					["status", 0],
+					["zigbeelocalstarttime", 2],
+					["zigbeelocalendtime", 2]
 				],
 				"dir": 1
 			},
 			"clearYearDayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"setHolidayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getHolidayScheduleRsp": {
 				"params": [
-					["holidayscheduleid", "uint8"],
-					["status", "uint8"],
-					["zigbeelocalstarttime", "uint32"],
-					["zigbeelocalendtime", "uint32"],
-					["opermodelduringholiday", "uint8"]
+					["holidayscheduleid", 0],
+					["status", 0],
+					["zigbeelocalstarttime", 2],
+					["zigbeelocalendtime", 2],
+					["opermodelduringholiday", 0]
 				],
 				"dir": 1
 			},
 			"clearHolidayScheduleRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"setUserTypeRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getUserTypeRsp": {
 				"params": [
-					["userid", "uint16"],
-					["usertype", "uint8"]
+					["userid", 1],
+					["usertype", 0]
 				],
 				"dir": 1
 			},
 			"setRfidCodeRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"getRfidCodeRsp": {
 				"params": [
-					["userid", "uint16"],
-					["userstatus", "uint8"],
-					["usertype", "uint8"],
-					["pincodevalue", "stringPreLen"]
+					["userid", 1],
+					["userstatus", 0],
+					["usertype", 0],
+					["pincodevalue", 26]
 				],
 				"dir": 1
 			},
 			"clearRfidCodeRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"clearAllRfidCodesRsp": {
 				"params": [
-					["status", "uint8"]
+					["status", 0]
 				],
 				"dir": 1
 			},
 			"operationEventNotification": {
 				"params": [
-					["opereventsrc", "uint8"],
-					["opereventcode", "uint8"],
-					["userid", "uint16"],
-					["pin", "uint8"],
-					["zigbeelocaltime", "uint32"],
-					["data", "uint8"]
+					["opereventsrc", 0],
+					["opereventcode", 0],
+					["userid", 1],
+					["pin", 0],
+					["zigbeelocaltime", 2],
+					["data", 0]
 				],
 				"dir": 1
 			},
 			"programmingEventNotification": {
 				"params": [
-					["programeventsrc", "uint8"],
-					["programeventcode", "uint8"],
-					["userid", "uint16"],
-					["pin", "uint8"],
-					["usertype", "uint8"],
-					["userstatus", "uint8"],
-					["zigbeelocaltime", "uint32"],
-					["data", "uint8"]
+					["programeventsrc", 0],
+					["programeventcode", 0],
+					["userid", 1],
+					["pin", 0],
+					["usertype", 0],
+					["userstatus", 0],
+					["zigbeelocaltime", 2],
+					["data", 0]
 				],
 				"dir": 1
 			}
@@ -1264,25 +1264,25 @@
 			},
 			"goToLiftValue": {
 				"params": [
-					["liftvalue", "uint16"]
+					["liftvalue", 1]
 				],
 				"dir": 0
 			},
 			"goToLiftPercentage": {
 				"params": [
-					["percentageliftvalue", "uint8"]
+					["percentageliftvalue", 0]
 				],
 				"dir": 0
 			},
 			"goToTiltValue": {
 				"params": [
-					["tiltvalue", "uint16"]
+					["tiltvalue", 1]
 				],
 				"dir": 0
 			},
 			"goToTiltPercentage": {
 				"params": [
-					["percentagetiltvalue", "uint8"]
+					["percentagetiltvalue", 0]
 				],
 				"dir": 0
 			}
@@ -1290,24 +1290,24 @@
 		"hvacThermostat": {
 			"setpointRaiseLower": {
 				"params": [
-					["mode", "uint8"],
-					["amount", "int8"]
+					["mode", 0],
+					["amount", 22]
 				],
 				"dir": 0
 			},
 			"setWeeklySchedule": {
 				"params": [
-					["numoftrans", "uint8"],
-					["dayofweek", "uint8"],
-					["mode", "preLenUint8"],
-					["thermoseqmode", "dynUint16"]
+					["numoftrans", 0],
+					["dayofweek", 0],
+					["mode", 25],
+					["thermoseqmode", 29]
 				],
 				"dir": 0
 			},
 			"getWeeklySchedule": {
 				"params": [
-					["daystoreturn", "uint8"],
-					["modetoreturn", "uint8"]
+					["daystoreturn", 0],
+					["modetoreturn", 0]
 				],
 				"dir": 0
 			},
@@ -1321,21 +1321,21 @@
 			},
 			"getWeeklyScheduleRsp": {
 				"params": [
-					["numoftrans", "uint8"],
-					["dayofweek", "uint8"],
-					["mode", "preLenUint8"],
-					["thermoseqmode", "dynUint16"]
+					["numoftrans", 0],
+					["dayofweek", 0],
+					["mode", 25],
+					["thermoseqmode", 29]
 				],
 				"dir": 1
 			},
 			"getRelayStatusLogRsp": {
 				"params": [
-					["timeofday", "uint16"],
-					["relaystatus", "uint16"],
-					["localtemp", "uint16"],
-					["humidity", "uint8"],
-					["setpoint", "uint16"],
-					["unreadentries", "uint16"]
+					["timeofday", 1],
+					["relaystatus", 1],
+					["localtemp", 1],
+					["humidity", 0],
+					["setpoint", 1],
+					["unreadentries", 1]
 				],
 				"dir": 1
 			}
@@ -1343,137 +1343,137 @@
 		"lightingColorCtrl": {
 			"moveToHue": {
 				"params": [
-					["hue", "uint8"],
-					["direction", "uint8"],
-					["transtime", "uint16"]
+					["hue", 0],
+					["direction", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveHue": {
 				"params": [
-					["movemode", "uint8"],
-					["rate", "uint8"]
+					["movemode", 0],
+					["rate", 0]
 				],
 				"dir": 0
 			},
 			"stepHue": {
 				"params": [
-					["stepmode", "uint8"],
-					["stepsize", "uint8"],
-					["transtime", "uint8"]
+					["stepmode", 0],
+					["stepsize", 0],
+					["transtime", 0]
 				],
 				"dir": 0
 			},
 			"moveToSaturation": {
 				"params": [
-					["saturation", "uint8"],
-					["transtime", "uint16"]
+					["saturation", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveSaturation": {
 				"params": [
-					["movemode", "uint8"],
-					["rate", "uint8"]
+					["movemode", 0],
+					["rate", 0]
 				],
 				"dir": 0
 			},
 			"stepSaturation": {
 				"params": [
-					["stepmode", "uint8"],
-					["stepsize", "uint8"],
-					["transtime", "uint8"]
+					["stepmode", 0],
+					["stepsize", 0],
+					["transtime", 0]
 				],
 				"dir": 0
 			},
 			"moveToHueAndSaturation": {
 				"params": [
-					["hue", "uint8"],
-					["saturation", "uint8"],
-					["transtime", "uint16"]
+					["hue", 0],
+					["saturation", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveToColor": {
 				"params": [
-					["colorx", "uint16"],
-					["colory", "uint16"],
-					["transtime", "uint16"]
+					["colorx", 1],
+					["colory", 1],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveColor": {
 				"params": [
-					["ratex", "int16"],
-					["ratey", "int16"]
+					["ratex", 23],
+					["ratey", 23]
 				],
 				"dir": 0
 			},
 			"stepColor": {
 				"params": [
-					["stepx", "int16"],
-					["stepy", "int16"],
-					["transtime", "uint16"]
+					["stepx", 23],
+					["stepy", 23],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"moveToColorTemp": {
 				"params": [
-					["colortemp", "uint16"],
-					["transtime", "uint16"]
+					["colortemp", 1],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"enhancedMoveToHue": {
 				"params": [
-					["enhancehue", "uint16"],
-					["direction", "uint8"],
-					["transtime", "uint16"]
+					["enhancehue", 1],
+					["direction", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"enhancedMoveHue": {
 				"params": [
-					["movemode", "uint8"],
-					["rate", "uint16"]
+					["movemode", 0],
+					["rate", 1]
 				],
 				"dir": 0
 			},
 			"enhancedStepHue": {
 				"params": [
-					["stepmode", "uint8"],
-					["stepsize", "uint16"],
-					["transtime", "uint16"]
+					["stepmode", 0],
+					["stepsize", 1],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"enhancedMoveToHueAndSaturation": {
 				"params": [
-					["enhancehue", "uint16"],
-					["saturation", "uint8"],
-					["transtime", "uint16"]
+					["enhancehue", 1],
+					["saturation", 0],
+					["transtime", 1]
 				],
 				"dir": 0
 			},
 			"colorLoopSet": {
 				"params": [
-					["bits", "uint8"],
-					["bytee", "uint8"],
-					["action", "uint8"],
-					["direction", "uint8"],
-					["time", "uint16"],
-					["starthue", "uint16"]
+					["bits", 0],
+					["bytee", 0],
+					["action", 0],
+					["direction", 0],
+					["time", 1],
+					["starthue", 1]
 				],
 				"dir": 0
 			},
 			"stopMoveStep": {
 				"params": [
-					["bits", "uint8"],
-					["bytee", "uint8"],
-					["action", "uint8"],
-					["direction", "uint8"],
-					["time", "uint16"],
-					["starthue", "uint16"]
+					["bits", 0],
+					["bytee", 0],
+					["action", 0],
+					["direction", 0],
+					["time", 1],
+					["starthue", 1]
 				],
 				"dir": 0
 			}
@@ -1481,8 +1481,8 @@
 		"ssIasZone": {
 			"enrollRsp": {
 				"params": [
-					["enrollrspcode", "uint8"],
-					["zoneid", "uint8"]
+					["enrollrspcode", 0],
+					["zoneid", 0]
 				],
 				"dir": 0
 			},
@@ -1496,15 +1496,15 @@
 			},
 			"statusChangeNotification": {
 				"params": [
-					["zonestatus", "uint16"],
-					["extendedstatus", "uint8"]
+					["zonestatus", 1],
+					["extendedstatus", 0]
 				],
 				"dir": 1
 			},
 			"enrollReq": {
 				"params": [
-					["zonetype", "uint16"],
-					["manucode", "uint16"]
+					["zonetype", 1],
+					["manucode", 1]
 				],
 				"dir": 1
 			}
@@ -1512,14 +1512,14 @@
 		"ssIasAce": {
 			"arm": {
 				"params": [
-					["armmode", "uint8"]
+					["armmode", 0]
 				],
 				"dir": 0
 			},
 			"bypass": {
 				"params": [
-					["numofzones", "preLenUint8"],
-					["zoneidlist", "dynUint8"]
+					["numofzones", 25],
+					["zoneidlist", 28]
 				],
 				"dir": 0
 			},
@@ -1541,7 +1541,7 @@
 			},
 			"getZoneInfo": {
 				"params": [
-					["zoneid", "uint8"]
+					["zoneid", 0]
 				],
 				"dir": 0
 			},
@@ -1555,95 +1555,95 @@
 			},
 			"getZoneStatus": {
 				"params": [
-					["startzoneid", "uint8"],
-					["maxnumzoneid", "uint8"],
-					["zonestatusmaskflag", "uint8"],
-					["zonestatusmask", "uint16"]
+					["startzoneid", 0],
+					["maxnumzoneid", 0],
+					["zonestatusmaskflag", 0],
+					["zonestatusmask", 1]
 				],
 				"dir": 0
 			},
 			"armRsp": {
 				"params": [
-					["armnotification", "uint8"]
+					["armnotification", 0]
 				],
 				"dir": 1
 			},
 			"getZoneIDMapRsp": {
 				"params": [
-					["zoneidmapsection0", "uint16"],
-					["zoneidmapsection1", "uint16"],
-					["zoneidmapsection2", "uint16"],
-					["zoneidmapsection3", "uint16"],
-					["zoneidmapsection4", "uint16"],
-					["zoneidmapsection5", "uint16"],
-					["zoneidmapsection6", "uint16"],
-					["zoneidmapsection7", "uint16"],
-					["zoneidmapsection8", "uint16"],
-					["zoneidmapsection9", "uint16"],
-					["zoneidmapsection10", "uint16"],
-					["zoneidmapsection11", "uint16"],
-					["zoneidmapsection12", "uint16"],
-					["zoneidmapsection13", "uint16"],
-					["zoneidmapsection14", "uint16"],
-					["zoneidmapsection15", "uint16"]
+					["zoneidmapsection0", 1],
+					["zoneidmapsection1", 1],
+					["zoneidmapsection2", 1],
+					["zoneidmapsection3", 1],
+					["zoneidmapsection4", 1],
+					["zoneidmapsection5", 1],
+					["zoneidmapsection6", 1],
+					["zoneidmapsection7", 1],
+					["zoneidmapsection8", 1],
+					["zoneidmapsection9", 1],
+					["zoneidmapsection10", 1],
+					["zoneidmapsection11", 1],
+					["zoneidmapsection12", 1],
+					["zoneidmapsection13", 1],
+					["zoneidmapsection14", 1],
+					["zoneidmapsection15", 1]
 				],
 				"dir": 1
 			},
 			"getZoneInfoRsp": {
 				"params": [
-					["zoneid", "uint8"],
-					["zonetype", "uint16"],
-					["ieeeaddr", "longaddr"]
+					["zoneid", 0],
+					["zonetype", 1],
+					["ieeeaddr", 3]
 				],
 				"dir": 1
 			},
 			"zoneStatusChanged": {
 				"params": [
-					["zoneid", "uint8"],
-					["zonestatus", "uint16"],
-					["audiblenotif", "uint8"],
-					["strlen", "uint8"],
-					["string", "stringPreLen"]
+					["zoneid", 0],
+					["zonestatus", 1],
+					["audiblenotif", 0],
+					["strlen", 0],
+					["string", 26]
 				],
 				"dir": 1
 			},
 			"panelStatusChanged": {
 				"params": [
-					["panelstatus", "uint8"],
-					["secondsremain", "uint8"],
-					["audiblenotif", "uint8"],
-					["alarmstatus", "uint8"]
+					["panelstatus", 0],
+					["secondsremain", 0],
+					["audiblenotif", 0],
+					["alarmstatus", 0]
 				],
 				"dir": 1
 			},
 			"getPanelStatusRsp": {
 				"params": [
-					["panelstatus", "uint8"],
-					["secondsremain", "uint8"],
-					["audiblenotif", "uint8"],
-					["alarmstatus", "uint8"]
+					["panelstatus", 0],
+					["secondsremain", 0],
+					["audiblenotif", 0],
+					["alarmstatus", 0]
 				],
 				"dir": 1
 			},
 			"setBypassedZoneList": {
 				"params": [
-					["numofzones", "preLenUint8"],
-					["zoneid", "dynUint8"]
+					["numofzones", 25],
+					["zoneid", 28]
 				],
 				"dir": 1
 			},
 			"bypassRsp": {
 				"params": [
-					["numofzones", "preLenUint8"],
-					["bypassresult", "dynUint8"]
+					["numofzones", 25],
+					["bypassresult", 28]
 				],
 				"dir": 1
 			},
 			"getZoneStatusRsp": {
 				"params": [
-					["zonestatuscomplete", "uint8"],
-					["numofzones", "preLenUint8"],
-					["zoneinfo", "zonebuffer"]
+					["zonestatuscomplete", 0],
+					["numofzones", 25],
+					["zoneinfo", 40]
 				],
 				"dir": 1
 			}
@@ -1651,14 +1651,14 @@
 		"ssIasWd": {
 			"startWarning": {
 				"params": [
-					["startwarninginfo", "uint8"],
-					["warningduration", "uint16"]
+					["startwarninginfo", 0],
+					["warningduration", 1]
 				],
 				"dir": 0
 			},
 			"squawk": {
 				"params": [
-					["squawkinfo", "uint8"]
+					["squawkinfo", 0]
 				],
 				"dir": 0
 			}
@@ -1666,20 +1666,20 @@
 		"piGenericTunnel": {
 			"matchProtocolAddr": {
 				"params": [
-					["protocoladdr", "stringPreLen"]
+					["protocoladdr", 26]
 				],
 				"dir": 0
 			},
 			"matchProtocolAddrRsp": {
 				"params": [
-					["devieeeaddr", "longaddr"],
-					["protocoladdr", "stringPreLen"]
+					["devieeeaddr", 3],
+					["protocoladdr", 26]
 				],
 				"dir": 1
 			},
 			"advertiseProtocolAddr": {
 				"params": [
-					["protocoladdr", "stringPreLen"]
+					["protocoladdr", 26]
 				],
 				"dir": 1
 			}
@@ -1687,7 +1687,7 @@
 		"piBacnetProtocolTunnel": {
 			"transferNpdu": {
 				"params": [
-					["npdu", "uint8"]
+					["npdu", 0]
 				],
 				"dir": 0
 			}
@@ -1785,22 +1785,22 @@
 			},
 			"getAlertsRsp": {
 				"params": [
-					["alertscount", "preLenUint8"],
-					["aalert", "dynUint24"]
+					["alertscount", 25],
+					["aalert", 30]
 				],
 				"dir": 1
 			},
 			"alertsNotification": {
 				"params": [
-					["alertscount", "preLenUint8"],
-					["aalert", "dynUint24"]
+					["alertscount", 25],
+					["aalert", 30]
 				],
 				"dir": 1
 			},
 			"eventNotification": {
 				"params": [
-					["eventheader", "uint8"],
-					["eventid", "uint8"]
+					["eventheader", 0],
+					["eventid", 0]
 				],
 				"dir": 1
 			}
@@ -1808,7 +1808,7 @@
 		"haApplianceStatistics": {
 			"log": {
 				"params": [
-					["logid", "uint32"]
+					["logid", 2]
 				],
 				"dir": 0
 			},
@@ -1818,33 +1818,33 @@
 			},
 			"logNotification": {
 				"params": [
-					["timestamp", "uint32"],
-					["logid", "uint32"],
-					["loglength", "preLenUint32"],
-					["logpayload", "dynUint8"]
+					["timestamp", 2],
+					["logid", 2],
+					["loglength", 27],
+					["logpayload", 28]
 				],
 				"dir": 1
 			},
 			"logRsp": {
 				"params": [
-					["timestamp", "uint32"],
-					["logid", "uint32"],
-					["loglength", "preLenUint32"],
-					["logpayload", "dynUint8"]
+					["timestamp", 2],
+					["logid", 2],
+					["loglength", 27],
+					["logpayload", 28]
 				],
 				"dir": 1
 			},
 			"logQueueRsp": {
 				"params": [
-					["logqueuesize", "preLenUint8"],
-					["logid", "dynUint32"]
+					["logqueuesize", 25],
+					["logid", 31]
 				],
 				"dir": 1
 			},
 			"statisticsAvailable": {
 				"params": [
-					["logqueuesize", "preLenUint8"],
-					["logid", "dynUint32"]
+					["logqueuesize", 25],
+					["logid", 31]
 				],
 				"dir": 1
 			}
@@ -1856,30 +1856,30 @@
 			},
 			"getMeasurementProfile": {
 				"params": [
-					["attrId", "uint16"],
-					["starttime", "uint32"],
-					["numofuntervals", "uint8"]
+					["attrId", 1],
+					["starttime", 2],
+					["numofuntervals", 0]
 				],
 				"dir": 0
 			},
 			"getProfileInfoRsp": {
 				"params": [
-					["profilecount", "uint8"],
-					["profileintervalperiod", "uint8"],
-					["maxnumofintervals", "uint8"],
-					["numofattrs", "preLenUint8"],
-					["listofattr", "dynUint16"]
+					["profilecount", 0],
+					["profileintervalperiod", 0],
+					["maxnumofintervals", 0],
+					["numofattrs", 25],
+					["listofattr", 29]
 				],
 				"dir": 1
 			},
 			"getMeasurementProfileRsp": {
 				"params": [
-					["starttime", "uint32"],
-					["status", "uint8"],
-					["profileintervalperiod", "uint8"],
-					["numofintervalsdeliv", "preLenUint8"],
-					["attrId", "uint16"],
-					["intervals", "dynUint8"]
+					["starttime", 2],
+					["status", 0],
+					["profileintervalperiod", 0],
+					["numofintervalsdeliv", 25],
+					["attrId", 1],
+					["intervals", 28]
 				],
 				"dir": 1
 			}
