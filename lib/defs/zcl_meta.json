@@ -1497,7 +1497,9 @@
 			"statusChangeNotification": {
 				"params": [
 					["zonestatus", 1],
-					["extendedstatus", 0]
+					["extendedstatus", 0],
+					["zoneid", 0],
+					["delay", 1]
 				],
 				"dir": 1
 			},
