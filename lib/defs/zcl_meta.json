@@ -150,9 +150,9 @@
 			},
 			"speakId": {
 				"params": [
-					["voice", 1],
 					["id", 1],
-					["length", 1]
+					["voice", 1],
+					["checksum", 2]
 				],
 				"dir": 0
 			}
