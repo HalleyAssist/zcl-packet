@@ -152,7 +152,7 @@
 				"params": [
 					["id", 1],
 					["voice", 1],
-					["checksum", 2]
+					["checksum", 24]
 				],
 				"dir": 0
 			}
