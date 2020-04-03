@@ -26,29 +26,26 @@ describe('Functional Cmd framer and parser Check', function() {
 
         cmdIds.forEach(function (cmd) {
             var funcObj,
-                reqParams,
-                payload,
-                args = {};
+                payload
 
-            reqParams = zclmeta.functional.getParams(cluster, cmd);
-
-            if (!reqParams) return;
-
-            reqParams.forEach(function (arg) {
-                args[arg.name] = randomArg(arg.type);
-            });
+            let meta = zclmeta.functional.get(cluster, cmd)
+            if(!meta){
+                console.log(`Unable to find metadata for ${cluster}, ${cmd}`)
+                return
+            }
+            
+            if (!meta.params) return;
+            const reqArgs = {}
+            for(const e of meta.params){
+                reqArgs[e[0]] = randomArg(e[1])
+            }
 
             funcObj = new FuncClass(cluster, 0, cmd);
-            payload = funcObj.frame(args);
+            payload = funcObj.frame(reqArgs);
 
-            funcObj.parse(payload, function (err, result) {
-                if(err){
-                    expect(err).to.equal(undefined, funcObj.cmd + ' frame() and parse() check')
-                }else{
-                    it(funcObj.cmd + ' frame() and parse() check', function () {
-                            expect(result).to.eql(args);
-                    });
-                }
+            const result = funcObj.parse(payload)
+            it(funcObj.cmd + ' frame() and parse() check', function () {
+                expect(result).to.eql(reqArgs);
             });
         });
     });
@@ -67,25 +64,26 @@ describe('Functional CmdRsp framer and parser Check', function() {
 
         cmdRspIds.forEach(function (cmdRsp) {
             var funcObj,
-                reqParams,
-                payload,
-                args = {};
+                payload
 
-            reqParams = zclmeta.functional.getParams(cluster, cmdRsp);
+            let meta = zclmeta.functional.get(cluster, cmdRsp);
+            if(!meta){
+                console.log(`Unable to find metadata for ${cluster}, ${cmdRsp}`)
+                return
+            }
 
-            if (!reqParams) return;
-
-            reqParams.forEach(function (arg) {
-                args[arg.name] = randomArg(arg.type);
-            });
+            if (!meta.params) return;
+            const reqArgs = {}
+            for(const e of meta.params){
+                reqArgs[e[0]] = randomArg(e[1])
+            }
 
             funcObj = new FuncClass(cluster, 1, cmdRsp);
-            payload = funcObj.frame(args);
+            payload = funcObj.frame(reqArgs);
 
-            funcObj.parse(payload, function (err, result) {
-                it(funcObj.cmd + ' frame() and parse() check', function () {
-                    expect(result).to.eql(args);
-                });
+            const result = funcObj.parse(payload)
+            it(funcObj.cmd + ' frame() and parse() check', function () {
+                expect(result).to.eql(reqArgs);
             });
         });
     });

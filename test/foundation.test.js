@@ -105,12 +105,11 @@ describe('Foundation Cmd framer and parser Check', function () {
         if (!valObj[cmd]) return;
 
         it(cmd + ' frame() and parse() check', function () {
-            var cmdPayload = new FoundClass(cmd),
+            let cmdPayload = new FoundClass(cmd),
                 zBuf = cmdPayload.frame(valObj[cmd]);
 
-            cmdPayload.parse(zBuf, function (err, result) {
-                expect(_.isEqual(result, valObj[cmd])).to.be.true;
-            });
+            const result = cmdPayload.parse(zBuf)
+            expect(_.isEqual(result, valObj[cmd])).to.be.true;
         });
     });
 });

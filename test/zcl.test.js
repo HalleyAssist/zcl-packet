@@ -184,9 +184,8 @@ describe('Module Methods Check', function() {
 
             it('zcl foundation framer and parser Check', function () {
                 zBuf = zcl.frame(zclFrame.frameCntl, zclFrame.manufCode, zclFrame.seqNum, zclFrame.cmdId, zclFrame.payload);
-                zcl.parse(zBuf, function (err, result) {
-                    expect(result).to.eql(zclFrame);
-                });
+                const result = zcl.parse(zBuf)
+                expect(result).to.eql(zclFrame);
             });
         });
     });
@@ -253,14 +252,13 @@ describe('Module Methods Check', function() {
 
             it('zcl functional framer and parser Check', function () {
                 zBuf = zcl.frame(zclFrame.frameCntl, zclFrame.manufCode, zclFrame.seqNum, zclFrame.cmdId, zclFrame.payload, 0x0005);
-                zcl.parse(zBuf, 0x0005, function (err, result) {
-                    if (result.cmdId === 'add')
-                        result.frameCntl.direction = 0;
-                    else 
-                        result.frameCntl.direction = 1;
+                const result = zcl.parse(zBuf, 0x0005)
+                if (result.cmdId === 'add')
+                    result.frameCntl.direction = 0;
+                else 
+                    result.frameCntl.direction = 1;
 
-                    expect(result).to.eql(zclFrame);
-                });
+                expect(result).to.eql(zclFrame);
             });
         });
     });
