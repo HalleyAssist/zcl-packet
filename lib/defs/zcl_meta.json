@@ -204,22 +204,19 @@
 				],
 				"dir": 1
 			},
-			"imageBlockRspSuccess": {
-				"params": [
-					["status", 0],
-					["manufacturerCode", 1],
-					["imageType", 1],
-					["fileVersion", 2],
-					["fileOffset", 2],
-					["dataLen", 25],
-					["data", 28]
-				],
-				"dir": 1
-			},
-			"imageBlockRspAbort": {
-				"params": [
-					["status", 0]
-				],
+			"imageBlockRsp": {
+				"params": {
+					"success": [
+						["status", 0],
+						["manufacturerCode", 1],
+						["imageType", 1],
+						["fileVersion", 2],
+						["fileOffset", 2],
+						["dataLen", 25],
+						["data", 28]
+					],
+					"abort": ["status", 0]
+				},
 				"dir": 1
 			},
 			"upgradeEndRsp": {
