@@ -215,7 +215,9 @@
 						["dataLen", 25],
 						["data", 28]
 					],
-					"abort": ["status", 0]
+					"abort": [
+						["status", 0]
+					]
 				},
 				"dir": 1
 			},
